@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gopuram Cinemas</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* NAVBAR */
+.navbar {
+  background: rgba(0,0,0,0.85);
+}
+
+/* PAGES */
+.page {
+  display: none;
+  padding-top: 80px;
+}
+
+.active {
+  display: block;
+}
+
+/* HOME */
+.hero {
+  height: 100vh;
+  background: url("/th.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-box {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* MOVIE CARD */
+.movie-card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card {
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* TITLE */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* 🍿 SNACKS (MODERN UI) */
+.snack-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.snack-card:hover {
+  transform: translateY(-8px);
+}
+
+.snack-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand">🎬 Gopuram Cinemas</a>
+
+    <div>
+      <button class="btn btn-outline-light btn-sm mx-1" onclick="showPage('home')">Home</button>
+      <button class="btn btn-outline-light btn-sm mx-1" onclick="showPage('movies')">Movies</button>
+      <button class="btn btn-outline-light btn-sm mx-1" onclick="showPage('prices')">Prices</button>
+      <button class="btn btn-outline-light btn-sm mx-1" onclick="showPage('snacks')">Snacks</button>
+      <button class="btn btn-outline-light btn-sm mx-1" onclick="showPage('location')">Location</button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- 🏠 HOME -->
+<div id="home" class="page active">
+  <div class="hero">
+    <div class="hero-box">
+      <h1>Welcome to Gopuram Cinemas 🎥</h1>
+      <p>Experience Movies Like Never Before</p>
+    </div>
+  </div>
+</div>
+
+<!-- 🎬 MOVIES -->
+<div id="movies" class="page container">
+
+  <h2 class="section-title">🎬 Now Showing</h2>
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._SL1500_.jpg">
+        <div class="card-body">
+          <h5>Avengers</h5>
+          <p>10 AM | 2 PM | 6 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._SL1024_.jpg">
+        <div class="card-body">
+          <h5>Batman</h5>
+          <p>11 AM | 3 PM | 9 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://m.media-amazon.com/images/I/91KkWf50SoL._SL1500_.jpg">
+        <div class="card-body">
+          <h5>Spider-Man</h5>
+          <p>12 PM | 4 PM | 8 PM</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 💰 PRICES -->
+<div id="prices" class="page container text-center">
+
+  <h2 class="section-title">💰 Ticket Prices</h2>
+
+  <div class="row">
+
+    <div class="col-md-4"><div class="p-3 border rounded">Normal - ₹120</div></div>
+    <div class="col-md-4"><div class="p-3 border rounded">Premium - ₹200</div></div>
+    <div class="col-md-4"><div class="p-3 border rounded">Recliner - ₹350</div></div>
+
+  </div>
+</div>
+
+<!-- 🍿 SNACKS (MODERN DESIGN) -->
+<div id="snacks" class="page container">
+
+  <h2 class="section-title">🍿 Snacks Zone</h2>
+
+  <div class="row justify-content-center">
+
+    <!-- POPCORN -->
+    <div class="col-md-3 m-2">
+      <div class="snack-card text-center">
+        <img class="snack-img" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
+        <h5>Butter Popcorn</h5>
+        <p class="price">₹120</p>
+        <button class="btn btn-warning btn-sm">Add</button>
+      </div>
+    </div>
+
+    <!-- COKE -->
+    <div class="col-md-3 m-2">
+      <div class="snack-card text-center">
+        <img class="snack-img" src="https://images.unsplash.com/photo-1604908812246-6a1c5f1a1d5c">
+        <h5>Cold Drink</h5>
+        <p class="price">₹60</p>
+        <button class="btn btn-warning btn-sm">Add</button>
+      </div>
+    </div>
+
+    <!-- NACHOS -->
+    <div class="col-md-3 m-2">
+      <div class="snack-card text-center">
+        <img class="snack-img" src="https://images.unsplash.com/photo-1606756790138-261d2b21cd75">
+        <h5>Nachos</h5>
+        <p class="price">₹150</p>
+        <button class="btn btn-warning btn-sm">Add</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 📍 LOCATION -->
+<div id="location" class="page container text-center">
+
+  <h2 class="section-title">📍 Theatre Location</h2>
+
+  <p>Gopuram Cinemas, Chennai, Tamil Nadu</p>
+
+  <iframe width="100%" height="400"
+    src="https://www.google.com/maps/embed?pb=!1m18..."
+    style="border:0;">
+  </iframe>
+
+</div>
+
+<!-- JS NAVIGATION -->
+<script>
+function showPage(pageId) {
+  let pages = document.querySelectorAll(".page");
+  pages.forEach(p => p.classList.remove("active"));
+  document.getElementById(pageId).classList.add("active");
+}
+</script>
+<footer style="text-align:center; padding:15px; background:#111; color:#fff;">
+  © 2026 Gopuram Cinemas. All Rights Reserved.
+</footer>
+
+</body>
+</html>
