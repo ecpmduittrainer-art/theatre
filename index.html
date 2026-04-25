@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamil Jeya Theatre</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{font-family:Arial;background:#111;color:white}
+
+/* Navbar */
+.navbar{background:#000}
+
+/* Sections */
+.section{display:none;padding:40px}
+.active{display:block}
+
+/* Hero */
+.hero{
+  height:90vh;
+  background:url('th.png') center/cover;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+}
+.hero h1{font-size:4rem}
+
+/* Cards */
+.card{
+  background:#222;
+  border:none;
+  color:white;
+  border-radius:15px;
+  overflow:hidden;
+}
+.card{
+  overflow:hidden;
+}
+
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:contain;
+  background:black;
+}
+/* Buttons */
+.btn-red{background:#e50914;color:white}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark">
+<div class="container">
+  <h3>🎬 Tamil Jeya Theatre</h3>
+  <div>
+    <button class="btn btn-light" onclick="show('home')">Home</button>
+    <button class="btn btn-light" onclick="show('movies')">Movies</button>
+    <button class="btn btn-light" onclick="show('price')">Ticket Price</button>
+    <button class="btn btn-light" onclick="show('snacks')">Snacks</button>
+    <button class="btn btn-danger" onclick="show('location')">Location</button>
+  </div>
+</div>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section active">
+  <div class="hero">
+    <div>
+      <h1>Tamil Jeya Theatre</h1>
+      <p>Experience Movies Like Never Before 🍿</p>
+      <button class="btn btn-red" onclick="show('movies')">Book Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- MOVIES -->
+<div id="movies" class="section container">
+  <h2 class="text-center mb-4">Now Showing</h2>
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/kat.png"  >
+        <div class="p-3 text-center">
+          <h5>Kaththi</h5>
+          <p>10:00 AM | 2:00 PM | 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/mam.png" height="10px">
+        <div class="p-3 text-center">
+          <h5>Maaman</h5>
+          <p>10:00 AM | 2:00 PM | 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/thai.png">
+        <div class="p-3 text-center">
+          <h5>Thai Kizhavi</h5>
+          <p>10:00 AM | 2:00 PM | 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/aran.png">
+        <div class="p-3 text-center">
+          <h5>Aranmanai 4</h5>
+          <p>10:00 AM | 2:00 PM | 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/kanch.png">
+        <div class="p-3 text-center">
+          <h5>Kanchana 2</h5>
+          <p>10:00 AM | 2:00 PM | 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/un.png">
+        <div class="p-3 text-center">
+          <h5>Unakum Enakum</h5>
+          <p>10:00 AM | 2:00 PM | 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/ther.png">
+        <div class="p-3 text-center">
+          <h5>Theri</h5>
+          <p>10:00 AM | 2:00 PM | 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/bai.png">
+        <div class="p-3 text-center">
+          <h5>Bairava</h5>
+          <p>11:00 AM | 5:00 PM | 9:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/ma.png">
+        <div class="p-3 text-center">
+          <h5>Maan Karate</h5>
+          <p>9:00 AM | 3:00 PM | 7:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PRICE -->
+<div id="price" class="section container">
+  <h2 class="text-center mb-5">🎟 Ticket Prices</h2>
+
+  <div class="row text-center">
+
+    <div class="col-md-4">
+      <div class="price-card">
+        <img src="/stand.png">
+        <h4>Standard</h4>
+        <h2>₹150</h2>
+        <p>Comfort Seating</p>
+        <button class="btn btn-red">Book Now</button>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="price-card premium">
+        <img src="/pre.png" >
+        <h4>Premium</h4>
+        <h2>₹250</h2>
+        <p>Better View + Sound</p>
+        <button class="btn btn-red">Book Now</button>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="price-card vip">
+        <img src="/luxu.png">
+        <h4>VIP</h4>
+        <h2>₹400</h2>
+        <p>Luxury Recliner Seats</p>
+        <button class="btn btn-red">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SNACKS -->
+<!-- SNACKS -->
+<div id="snacks" class="section container mt-4">
+
+  <h2 class="text-center mb-4">🍿 Snacks</h2>
+
+  <div class="row flex-nowrap overflow-auto">
+
+    <!-- 1 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/pop.png">
+        <div class="p-3 text-center">
+          <h5>Popcorn</h5>
+          <p>₹250</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/cut.png">
+        <div class="p-3 text-center">
+          <h5>Cutlet</h5>
+          <p>₹175</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/pizza.png">
+        <div class="p-3 text-center">
+          <h5>Pizza</h5>
+          <p>₹359</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/bur.png">
+        <div class="p-3 text-center">
+          <h5>Burger</h5>
+          <p>₹259</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/fries.png">
+        <div class="p-3 text-center">
+          <h5>Fries</h5>
+          <p>₹159</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/ice.png">
+        <div class="p-3 text-center">
+          <h5>Icecream</h5>
+          <p>₹179</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/puff.png">
+        <div class="p-3 text-center">
+          <h5>Puffs</h5>
+          <p>₹90</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/wafels.png">
+        <div class="p-3 text-center">
+          <h5>Strawberry Wafels</h5>
+          <p>₹269</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="col-md-4">
+      <div class="card snack-card">
+        <img src="/combo2.png">
+        <div class="p-3 text-center">
+          <h5>Family Combo</h5>
+          <p>₹250</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+  
+<!-- LOCATION -->
+<div id="location" class="section container">
+  <h2 class="text-center mb-4">Location</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.79705369999!2d78.13050557501823!3d9.950836773878777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5c2377c978b%3A0x6ee4184fb0243541!2sTamil%20Jaya%20Cinemas!5e0!3m2!1sen!2sin!4v1777114053909!5m2!1sen!2sin" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+<footer class="text-center p-3 mt-5" style="background:#000;color:white;">
+  © 2026 Tamil Jeya Cinemas. All Rights Reserved.
+</footer>
+</body>
+</html>
